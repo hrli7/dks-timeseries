@@ -38,6 +38,9 @@ The example is **fictional**, with 104 weekly observations. Its generator is det
 Replace the input with your own authorized data to run research. Use a new output directory
 for each run; existing runs are not overwritten.
 
+If the checkpoint download stalls in Hugging Face's Xet transfer client, rerun the command
+with `HF_HUB_DISABLE_XET=1` before `python forecast.py` to use standard HTTP downloads.
+
 ## Input format
 
 One row per time period, in chronological order, with a `date` column and numeric columns:
